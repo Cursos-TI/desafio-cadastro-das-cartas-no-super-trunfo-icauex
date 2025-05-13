@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <locale.h>
 
-int main(){
+int main() {
 
   //Carta 1//
   setlocale(LC_ALL, "pt_BR.UTF-8");
@@ -262,7 +262,8 @@ scanf("%d", &desafioOpcao2);
 
 if (desafioOpcao1 == desafioOpcao2) {
   printf("Você não pode escolher o mesmo atributo duas vezes!\n");
-
+  return 1; // encerra o programa//
+}
   // somando os valores dos atributos escolhidos //
 for (int i = 0; i < 2; i++) {
   int escolha = (i == 0) ? desafioOpcao1 : desafioOpcao2;
@@ -309,9 +310,6 @@ if (somaCarta1 > somaCarta2) {
 } else {
     printf("Desafio: Empate!\n");
 }
-
-
-
 
 
 
